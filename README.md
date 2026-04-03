@@ -1,4 +1,4 @@
-# IA-20261-UdeA
+# IA-20261-UdeA-LLMs
 
 Student: Paulina Osorio Hincapié
 
