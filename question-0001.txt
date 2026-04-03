@@ -1,0 +1,20 @@
+question-0001:
+
+Contexto:
+En una planta industrial, los sensores pueden empezar a fallar gradualmente antes de romperse del todo, lo que se conoce como drift. Tu tarea es escribir una función que identifique qué sensores están mostrando un comportamiento anómalo comparado con un periodo de funcionamiento normal
+
+El Problema 1:
+Imagina que tienes un DataFrame con lecturas de 10 sensores de temperatura. Durante las primeras 500 filas (periodo de referencia), sabemos que la planta operó correctamente. Después, algunos sensores empezaron a fallar.Debes desarrollar una función llamada detect_drifting_sensors que:
+
+Reciba un DataFrame de Pandas y un entero ref_rows (el número de filas iniciales sanas).
+
+Use Numpy para calcular la media y desviación estándar del periodo de referencia para cada columna.
+
+Utilice el StandardScaler de Sklearn para normalizar los datos de todo el dataset basándose únicamente en las estadísticas del periodo de referencia.
+
+Identifique si en las filas posteriores a ref_rows, algún sensor tiene más de un 15% de sus lecturas fuera del rango de 3 desviaciones estándar ($\pm3\sigma$).
+
+Devuelva una lista con los nombres de las columnas que fallaron.
+
+
+

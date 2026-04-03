@@ -1,0 +1,15 @@
+question-0003:
+
+Contexto:
+Tienes un modelo de Machine Learning en producción que clasifica transacciones financieras. Sospechas que los datos que están llegando actualmente han cambiado su distribución respecto a los datos con los que el modelo fue entrenado originalmente.
+
+Tu Tarea:
+Desarrolla una función llamada detect_data_drift que realice lo siguiente:
+
+Entrenamiento de un Autoencoder Lineal: Utiliza PCA de sklearn para aprender la estructura de los datos de entrenamiento (baseline). Debes reducir los datos a un número $k$ de componentes principales que expliquen el 95% de la varianza.
+
+Cálculo del Error de Reconstrucción: Define el error como la distancia euclidiana entre el dato original y su reconstrucción tras aplicar PCA.
+
+Identificación de Anomalías/Drift: La función debe recibir un nuevo conjunto de datos (producción) y determinar qué filas tienen un error de reconstrucción superior al percentil 99 del error observado en el entrenamiento.
+
+

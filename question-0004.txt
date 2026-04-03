@@ -1,0 +1,28 @@
+question-0004:
+
+Contexto:
+Imagina que tienes un dataset de una red de sensores que miden el consumo eléctrico cada hora. Los datos son ruidosos y tienen picos estacionales. Tu objetivo es crear una función que identifique si el consumo de la próxima hora será una "anomalía" (un pico inusual) basándose en las estadísticas de las últimas 24 horas.
+
+Tu tarea:
+Desarrolla una función llamada detectar_anomalias_energia(df_consumo) que realice lo siguiente:
+
+Ingeniería de Características con Pandas y Numpy:Calcula la media móvil y la desviación estándar móvil de las últimas 24 horas de la columna consumo_kwh.
+
+Crea una columna llamada z_score usando la fórmula$$z = \frac{x - \mu}{\sigma}$$(donde $x$ es el valor actual, $\mu$ la media móvil y $\sigma$ la desviación estándar). 
+
+Usa numpy para asegurar que no haya errores de división por cero (reemplazando resultados infinitos por 0).
+
+Crea variables lag (retrasos) para las horas $t-1$, $t-2$ y $t-3$.
+
+Preprocesamiento con Sklearn:Divide los datos en entrenamiento y prueba (80/20) de forma secuencial (no aleatoria, ya que es una serie temporal).
+
+Utiliza un RobustScaler de sklearn para normalizar las características, protegiendo al modelo de los valores atípicos que intentas detectar.
+
+Modelado:Entrena un modelo de IsolationForest para detectar qué registros se comportan de forma distinta al patrón histórico.
+
+La función debe devolver el DataFrame original con una nueva columna es_anomalia (booleano) y el porcentaje de anomalías detectadas en el set de prueba.
+
+
+
+
+

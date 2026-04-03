@@ -1,0 +1,19 @@
+question-0002:
+
+Contexto:
+En entornos de producción, los modelos de machine learning pierden precisión si los datos que reciben hoy son estadísticamente diferentes a los datos con los que fueron entrenados (fenómeno conocido como Data Drift).
+
+El problema 2:
+Desarrolla una función en Python llamada detect_feature_drift que reciba dos DataFrames de pandas (df_train y df_test) y un umbral numérico (threshold). La función debe identificar qué columnas numéricas han sufrido un cambio significativo en su distribución.
+
+Requerimientos técnicos:
+
+Pandas: Filtra automáticamente solo las columnas numéricas de ambos DataFrames.
+
+Scikit-Learn: Utiliza el StandardScaler para normalizar las columnas antes de compararlas, asegurando que la escala no afecte la detección.
+
+NumPy: Calcula la Distancia de Wasserstein (o una métrica similar como la diferencia de medias normalizadas) entre las distribuciones de entrenamiento y prueba para cada columna.
+
+Retorno: La función debe devolver un diccionario donde las llaves sean los nombres de las columnas que superaron el threshold y los valores sean la magnitud del cambio detectado.
+
+
