@@ -14,7 +14,7 @@ import numpy as np
 from sklearn.decomposition import PCA
 from sklearn.preprocessing import StandardScaler
 
-def generar_caso_de_detect_data_drift():
+def generar_caso_de_uso_0003():
     """
     Genera casos de prueba aleatorios para la función detect_data_drift.
     Crea un escenario de entrenamiento estable y un escenario de producción
