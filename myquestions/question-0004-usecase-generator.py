@@ -13,7 +13,7 @@ import pandas as pd
 import numpy as np
 from datetime import datetime, timedelta
 
-def generate_use_case():
+def generar_caso_de_uso_0004():
     n_rows = np.random.randint(500, 1000)
     noise_level = np.random.uniform(0.1, 0.5)
     num_anomalies = np.random.randint(5, 15)
