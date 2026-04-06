@@ -13,7 +13,7 @@ import pandas as pd
 import numpy as np
 from sklearn.preprocessing import StandardScaler
 
-def generar_caso_de_detect_drifting_sensors():
+def generar_caso_de_uso_0001():
     """
     Genera un caso de prueba aleatorio (input y output esperado)
     para la función detect_drifting_sensors.
