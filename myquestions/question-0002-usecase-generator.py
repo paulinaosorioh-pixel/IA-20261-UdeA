@@ -13,7 +13,7 @@ import pandas as pd
 import numpy as np
 from sklearn.preprocessing import StandardScaler
 
-def generar_caso_de_uso_0004():
+def generar_caso_de_uso_0002():
     """
     Genera casos de prueba aleatorios para la función detect_feature_drift.
     Crea dos DataFrames (train y test) con distribuciones que pueden o no variar.
