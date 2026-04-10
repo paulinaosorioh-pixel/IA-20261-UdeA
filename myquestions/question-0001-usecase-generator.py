@@ -56,7 +56,7 @@ def generar_caso_de_uso_0001():
     return input_dict, expected_output
 
 # --- Ejemplo de uso ---
-input_data, output_esperado = generar_caso_de_detect_drifting_sensors()
+input_data, output_esperado = generar_caso_de_uso_0001()
 
 print(f"Configuración: {len(input_data['df'])} filas, {input_data['ref_rows']} de referencia.")
 print(f"Sensores que deberían fallar: {output_esperado}")
